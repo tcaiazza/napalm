@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 # Copyright 2015 Spotify AB. All rights reserved.
 #
 # The contents of this file are licensed under the Apache License, Version 2.0
@@ -82,6 +83,8 @@ class NXOSDriver(NXOSDriverBase):
 
         if optional_args is None:
             optional_args = {}
+
+        self.profile = ["nxos"]
 
         # nxos_protocol is there for backwards compatibility, transport is the preferred method
         self.transport = optional_args.get('transport', optional_args.get('nxos_protocol', 'https'))
